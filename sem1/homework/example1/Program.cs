@@ -10,6 +10,7 @@ if (number1 > number2)
 }
 else
     if(number1 == number2)
-          Console.WriteLine($"Числа равны");
+        Console.WriteLine($"Числа равны");
+        
 else
     Console.WriteLine($"Число {number2} больше");
