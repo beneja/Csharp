@@ -4,8 +4,8 @@
 Console.Clear();
 
 int num = new Random().Next(100, 1000);
-int second = num / 100;
-int third = num % 10;
-int result = second * 10 + third;
+int third = num / 100;
+int second = num % 10;
+int result = third * 10 + second;
 
 Console.Write($"{num}, {result}");
