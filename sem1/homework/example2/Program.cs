@@ -10,8 +10,7 @@ int number3 = int.Parse(Console.ReadLine()!);
 
 if (number1 > number2 && number1 > number3)
     Console.WriteLine($"Число {number1} наибольшее");
-else
-    if (number2 > number3)
+else if (number2 > number3)
     Console.WriteLine($"Число {number2} наибольшее");
 else
     Console.WriteLine($"Число {number3} наибольшее");

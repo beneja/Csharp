@@ -8,8 +8,7 @@ if (number1 > number2)
 {
     Console.WriteLine($"Число {number1} больше");
 }
-else
-    if(number1 == number2)
+else if(number1 == number2)
         Console.WriteLine($"Числа равны");
         
 else

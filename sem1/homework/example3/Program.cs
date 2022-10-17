@@ -2,7 +2,7 @@
 Console.Write("Введите число: ");
 int numb = int.Parse(Console.ReadLine()!);
 
-if (numb % 2 == 1)
-    Console.WriteLine("Введённое число нечётное");
-else 
+if (numb % 2 == 0)
     Console.WriteLine("Введённое число чётное");
+else 
+    Console.WriteLine("Введённое число нечётное");

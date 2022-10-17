@@ -7,3 +7,7 @@ while(beginCount <= number)
     Console.Write($"{beginCount} ");
     beginCount += 2;
 }
+for (int i = 2; i <= number; i +=2)
+{
+    Console.Write($"{i} ");
+}
