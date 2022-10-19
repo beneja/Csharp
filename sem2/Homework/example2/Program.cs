@@ -4,12 +4,8 @@ Console.Write("Введите трёхзначное число: ");
 int numb = int.Parse(Console.ReadLine()!);
 if (numb > 99)
 {
-    while (numb > 999)
-    {
-        numb = (numb - (numb%10))/10;
-        Console.WriteLine(numb);
-    }
-    int third = numb - numb%100;
-    Console.WriteLine($"первая слева цифра {third/100}");
+    numb = numb%1000;    
+    numb = (numb - numb%100)/100;
+    Console.WriteLine($"Третья слева цифра {numb}");
 }
 else Console.WriteLine("Третьей цифры нет");
