@@ -10,6 +10,6 @@ if (numb > 99)
         Console.WriteLine(numb);
     }
     int third = numb - numb%100;
-    Console.WriteLine($"третья спраца цифра {third/100}");
+    Console.WriteLine($"первая слева цифра {third/100}");
 }
 else Console.WriteLine("Третьей цифры нет");
