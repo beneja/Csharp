@@ -12,7 +12,7 @@ class MyProgram
     static void Main()
     {
         Console.Write("Введите N:");
-        int n = int.Parse(Console.ReadLine());
+        int n = int.Parse(Console.ReadLine()!);
         
         getPows(n);
     }
