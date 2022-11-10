@@ -4,14 +4,22 @@ void FirTree(int haight)
     string line = "";
     string star = "*";
     int countProbel = haight - 1;
-    int 
+    int countStar = 1;
+    //Console.WriteLine(countProbel);
     for (; haight != 0; haight--)
     {
-        while (line.Length < haight)
+        while (countProbel != 0)
         {
             line += " ";
+            countProbel--;
         }
         Console.WriteLine($"{line}{star}");
+        while (countStar < haight)
+        {
+            star += "**";
+            countProbel--;
+        }
+        
         line.Remove(0, 2);
         star += "**";
                
