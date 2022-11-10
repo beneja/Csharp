@@ -8,7 +8,6 @@ int SumOfDigits(int number)
         
         result += (number%10);
         number /= 10; 
-        Console.WriteLine($"{number}, {result}");
     }
     return result;
 }
