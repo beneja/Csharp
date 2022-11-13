@@ -1,31 +1,23 @@
 ﻿// Задача “со звездочкой”: Напишите функцию, которая принимает одно число - высоту елочки и рисует ее в консоли звездочками.
-void FirTree(int haight)
+int Tree(int H)
 {
-    string line = "";
-    string star = "*";
-    int countProbel = haight - 1;
-    int countStar = 1;
-    //Console.WriteLine(countProbel);
-    for (; haight != 0; haight--)
+    for (int i = 1; i <= H; i++)
     {
-        while (countProbel != 0)
+        for (int j = 1; j <= H + i; j++)
         {
-            line += " ";
-            countProbel--;
+            if (j <= H - i + 1)
+            {
+                Console.Write(" ");
+            }
+            else Console.Write("*");
         }
-        Console.WriteLine($"{line}{star}");
-        while (countStar < haight)
-        {
-            star += "**";
-            countProbel--;
-        }
-        
-        line.Remove(0, 2);
-        star += "**";
-               
+        Console.Write("\n");
     }
-
+    return H;
 }
-Console.Write("Введите высоту ёлочки: ");
-int Haight = int.Parse(Console.ReadLine()!);
-FirTree(Haight);
+Console.Clear();
+Console.WriteLine("Введите высоту ёлочки: ");
+int N = int.Parse(Console.ReadLine()!);
+Console.WriteLine();
+Tree(N);
+Console.WriteLine();
