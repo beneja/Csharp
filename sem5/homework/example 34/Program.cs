@@ -17,7 +17,7 @@ int[] array = GetArray(10, 100, 1000);
 int CountEven(int[] array)
 {
     int count = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length; i++) //foreach(int el in array) можно
     {
         if (array[i] % 2 == 0)
         {

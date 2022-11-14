@@ -7,7 +7,7 @@ double[] GetArray(int size)
     double[] res = new double[size];
     for (int i = 0; i < size; i++)
     {
-        res[i] = new Random().NextDouble()*20;
+        res[i] = new Random().NextDouble()*20; // res[i] = Math.Round(new Random().NextDouble() * (maxValue - minValue) + minValue, 2);
         res[i] = Math.Round(res[i], 2);
     }
     return res;
@@ -19,7 +19,7 @@ double Diff(double[] array)
 {
     double Min = array[0];
     double Max = array[0];
-    for(int i = 0; i < array.Length; i++)
+    for(int i = 1; i < array.Length; i++)
     {
         
         if(array[i] < Min)
