@@ -13,5 +13,5 @@ int GetBinariNumber(int number)
 }
 
 Console.Write("Введите число: ");
-int num = int.Parse(Console.ReadLine());
+int num = int.Parse(Console.ReadLine()!);
 Console.WriteLine(GetBinariNumber(num));
