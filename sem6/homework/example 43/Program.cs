@@ -4,23 +4,23 @@
 // пользователем.
 // b1 = 2, k1 = 5, b2 = 4, k2 =
 // 9 -> (-0,5; -0,5)
-double[] IntersectionLine (double[] line1, double[] line2)
+double[] IntersectionLine(double[] line1, double[] line2)
 {
-    double[] interseption = new double [2];
-    if(line1[0] == line2[0] && line1[1] == line2[1])
+    double[] interseption = new double[2];
+    if (line1[0] == line2[0] && line1[1] == line2[1])
     {
         Console.WriteLine("Это одна и та же прямая");
     }
     else
     {
-        interseption[0] = (line1[1] - line2[1])/-(line1[0] - line2[0]);
-        interseption[1] = (line2[0]*interseption[0]) +line2[1];
+        interseption[0] = (line1[1] - line2[1]) / -(line1[0] - line2[0]);
+        interseption[1] = (line2[0] * interseption[0]) + line2[1];
     }
     return interseption;
 }
 double[] GetArrayLine()
 {
-    double[] Line = new double [2];
+    double[] Line = new double[2];
     Console.Write("Введите коэффициент K прямой: ");
     double K = 0;
     K = double.Parse(Console.ReadLine()!);
@@ -36,4 +36,5 @@ double[] Line1 = GetArrayLine();
 Console.WriteLine("Ввод второй прямой");
 double[] Line2 = GetArrayLine();
 double[] Interseption = IntersectionLine(Line1, Line2);
-Console.WriteLine($"Точка пересечения прямых "+(String.Join(", ", Interseption)));
+
+Console.WriteLine($"Точка пересечения прямых " + (String.Join(", ", Interseption)));
