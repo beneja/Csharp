@@ -6,7 +6,7 @@ int[] FillFromKeyboardArray(int size)
 {
     int[] array = new int[size];
     Console.WriteLine("Введите числа: ");
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         array[i] = int.Parse(Console.ReadLine()!);
     }
@@ -15,9 +15,9 @@ int[] FillFromKeyboardArray(int size)
 int CountPositiv(int[] array)
 {
     int count = 0;
-    foreach(int i in array)
+    foreach (int i in array)
     {
-        if(i > 0)
+        if (i > 0)
         {
             count++;
         }
