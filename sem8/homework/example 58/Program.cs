@@ -8,7 +8,6 @@
 int[,] GetArray(int m, int n, int minValue, int maxValue)
 {
     int[,] result = new int[m, n];
-
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
@@ -16,7 +15,6 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
             result[i, j] = new Random().Next(minValue, maxValue + 1);
         }
     }
-
     return result;
 }
 void PrintArray(int[,] inArray)
@@ -30,16 +28,20 @@ void PrintArray(int[,] inArray)
         Console.WriteLine();
     }
 }
-int MultiplyMatrices(int[,] matrix1, int[,] matrix2)
+int[,] MultiplyMatrices(int[,] matrix1, int[,] matrix2)
 {
     int[,] result = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
-    for(int i = 0; i < matrix2.GetLength(0); i++)
+    for (int i = 0; i < matrix1.GetLength(0); i++)
     {
-        for(int j = 0; j < matrix2.GetLength(1); j++)
+        for (int j = 0; j < matrix2.GetLength(1); j++)
         {
-            
+            for (int k = 0; k < matrix2.GetLength(0); k++)
+            {
+                result[i, j] += matrix1[i, k] * matrix2[k, j];
+            }
         }
     }
+    return result;
 }
 Console.Clear();
 Console.WriteLine("Первая матрица");
@@ -57,9 +59,10 @@ int[,] array2 = GetArray(rows2, cols2, 0, 10);
 PrintArray(array1);
 Console.WriteLine();
 PrintArray(array2);
-if(array1.GetLength(1) == array2.GetLength(0))
+Console.WriteLine();
+if (array1.GetLength(1) == array2.GetLength(0))
 {
-    int NewMatrix = MultiplyMatrices(array1, array2);
-    PrintArray(NewMatrix);
+    int[,] resultMatrix = MultiplyMatrices(array1, array2);
+    PrintArray(resultMatrix);
 }
 else Console.WriteLine("Матрицы нельзя перемножить");
